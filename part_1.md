@@ -38,4 +38,4 @@ If that worked try importing pyowm as well.
 
 If you have those libraries installed and you have twitter setup, you're ready to make a twitter bot!
 
-[Part 2: The Code]()
+[Part 2: The Code](https://github.com/OKStateACM/TwitterBotCodelab/blob/master/part_2.md)
