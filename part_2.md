@@ -176,4 +176,4 @@ def on_data(self, data):
 
 Our twitter bot should be ready now! Run the program by calling ```python bot.py``` and then tweet something to your bot. It should respond with the temperature in Stillwater!
 
-[Part 3: Where to go from here]()
+[Part 3: Where to go from here](https://github.com/OKStateACM/TwitterBotCodelab/blob/master/part_3.md)
