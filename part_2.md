@@ -149,7 +149,7 @@ Now that we have the tweet id, username, and temperature, we can prepare a tweet
 
 ```python
 def send_tweet(username, tweetID, temp):
-    tweet = "@{} The weather in Stillwater, OK is currently {} degrees.".format(username, username, temp)
+    tweet = "@{} The weather in Stillwater, OK is currently {} degrees.".format(username, temp)
     api.update_status(tweet, tweetID)
 ```
 
@@ -168,6 +168,8 @@ def on_data(self, data):
         observation = owm.weather_at_id(4552215) # 4552215 is the id for Stillwater
         weather = observation.get_weather()
         temperature = weather.get_temperature('fahrenheit')['temp']
+	results = "ID: {}, Username: {}, Tempature: {}".format(id, username, tempature) #String with all of the data for print testing
+        print(results)
         send_tweet(username, id, temperature)
         return True
 ```
