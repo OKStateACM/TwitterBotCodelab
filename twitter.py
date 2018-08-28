@@ -1,5 +1,4 @@
 from tweepy import Stream
-from tweepy import OAuthHandler
 import tweepy
 from tweepy.streaming import StreamListener
 import pyowm
@@ -11,8 +10,9 @@ auth = tweepy.OAuthHandler(info.ckey, info.csecret)
 auth.set_access_token(info.atoken, info.asecret)
 api = tweepy.API(auth)
 
+
 def send_tweet(username, tweetID, temp):
-    tweet = "@{} The weather in Stillwater, OK is currently {} degrees.".format(username, username, temp)
+    tweet = "@{} The weather in Stillwater, OK is currently {} degrees.".format(username, temp)
     api.update_status(tweet, tweetID)
 
 
@@ -28,14 +28,13 @@ class Listener(StreamListener):
             observation = owm.weather_at_id(4552215)
             weather = observation.get_weather()
             tempature = weather.get_temperature('fahrenheit')['temp']
+            results = "ID: {}, Username: {}, Tempature: {}".format(id, username, tempature)
+            print(results)
             send_tweet(username,id,tempature)
             return (True)
 
     def on_error(self, status):
         print(status)
 
-auth = OAuthHandler(info.ckey, info.csecret)
-auth.set_access_token(info.atoken, info.asecret)
-
-twitterStream = Stream(auth, listener())
+twitterStream = Stream(auth, Listener())
 twitterStream.filter(track=["@emayberry74"])
