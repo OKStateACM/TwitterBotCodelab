@@ -11,7 +11,6 @@ auth = tweepy.OAuthHandler(info.ckey, info.csecret)
 auth.set_access_token(info.atoken, info.asecret)
 api = tweepy.API(auth)
 
-
 def send_tweet(username, tweetID, temp):
     tweet = "@{} The weather in Stillwater, OK is currently {} degrees.".format(username, username, temp)
     api.update_status(tweet, tweetID)
@@ -40,5 +39,3 @@ auth.set_access_token(info.atoken, info.asecret)
 
 twitterStream = Stream(auth, listener())
 twitterStream.filter(track=["@emayberry74"])
-
-
