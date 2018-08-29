@@ -7,4 +7,4 @@ Congratulations! You've made a twitter bot! We're excited to see what you can do
 * Use the text in the tweet to figure out how to respond
 * Use another API besides OpenWeatherMap to respond with something besides the weather
 
-If you expand on this at all, or make your own twitter bot, make sure to share your work in our slack!
+If you expand on this at all, or make your own twitter bot, make sure to share your work in our [Slack](https://join.slack.com/t/okstate-acm/shared_invite/enQtNDI1MTExODcxNTA0LTliNDNjOTg1M2NjNmE3ZDVjODNjMjE0MmY0MzEwYTBmMDE3YjQ4NTg3NTJjY2E2ZTc4OTMwNGIzNDUzODgxMTc)!
